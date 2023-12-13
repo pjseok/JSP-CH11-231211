@@ -28,7 +28,7 @@
 		String password="12345";
 		
 		Connection conn = null;
-		Statement stmt = null;
+		
 		
 		try{
 			Class.forName(driverName); // 드라이버 불러오기
@@ -45,9 +45,7 @@
 			
 		} finally { // 에러의 발생여부와 상관없이 무조건 실행되는 문장을 삽입
 			try{
-				if(stmt != null){
-					stmt.close();
-				}
+				
 				
 				if(conn != null){
 					conn.close();
